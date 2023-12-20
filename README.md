@@ -2,8 +2,8 @@
 
 ## Quick Start
 
-Install Docker and Docker Compose.
-
+Install Docker and Docker Compose. its sohail
+ please check
 ```
 docker-compose up
 ```
