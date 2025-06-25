@@ -20,13 +20,16 @@ jobs:
           path: '.'
           output_path: 'kics-results'
           output_formats: 'json,sarif,html'
-          fail_on: 'none'           # Do not fail even on HIGH issues
-          ignore_on_exit: true      # Prevent exit code 50 from stopping workflow
+          fail_on: 'none'
+          ignore_on_exit: true
         env:
           NODE_OPTIONS: "--openssl-legacy-provider"
 
+      - name: List KICS output files
+        run: ls -R kics-results
+
       - name: Upload SARIF to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: kics-results/results.sarif
 
