@@ -2,9 +2,9 @@ name: KICS Vulnerability Scan
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   kics_scan:
@@ -31,4 +31,3 @@ jobs:
         with:
           name: kics-html-report
           path: kics-results/results.html
-
