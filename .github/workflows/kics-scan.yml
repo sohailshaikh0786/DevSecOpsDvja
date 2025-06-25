@@ -31,3 +31,13 @@ jobs:
         with:
           name: kics-html-report
           path: kics-results/results.html
+
+      - name: Run KICS Scan
+        uses: Checkmarx/kics-github-action@v1.6
+        with:
+          path: '.'
+          output_path: 'kics-results'
+          output_formats: 'json,sarif,html'
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
+
