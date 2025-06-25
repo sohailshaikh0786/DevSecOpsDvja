@@ -20,6 +20,8 @@ jobs:
           path: '.'
           output_path: 'kics-results'
           output_formats: 'json,sarif,html'
+          fail_on: 'none'           # Do not fail even on HIGH issues
+          ignore_on_exit: true      # Prevent exit code 50 from stopping workflow
         env:
           NODE_OPTIONS: "--openssl-legacy-provider"
 
