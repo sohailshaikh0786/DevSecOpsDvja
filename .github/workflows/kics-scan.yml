@@ -27,7 +27,7 @@ jobs:
           sarif_file: kics-results/results.sarif
 
       - name: Upload HTML Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: kics-html-report
           path: kics-results/results.html
